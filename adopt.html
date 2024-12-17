@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            padding: 10px;
+            background-color: #007bff;
+            margin: 0;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .adopt-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .book-catalog ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .book-catalog li {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .book-catalog img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .short-desc,
+        .full-desc {
+            margin: 10px 0;
+        }
+
+        .toggle-desc-btn {
+            margin: 5px 0;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .toggle-desc-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #adoption-form-section {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="adopt-header">
+            <h1>Adopt Books</h1>
+            <p>Find your next great read and support our mission.</p>
+        </section>
+
+        <section class="book-catalog">
+            <h2>Book Catalog</h2>
+            <ul>
+                <li>
+                    <img src="c:\Users\abhis\OneDrive\Documents\book 19.jpg" alt="Book">
+                    <h3>Author's Name: Saranya Umakanthan</h3>
+                    <p class="short-desc">
+                        Love can break the strongest of men and they are the ones to fall hard...
+                    </p>
+                    <p class="full-desc" style="display: none;">
+                        Love can break the strongest of men and they are the ones to fall hard. But after the fall, will they be able to bounce back and start afresh? Will they ever realize that true love is supposed to "build" them and not "break" them? Siddharth Saxena, a young and dynamic CEO, falls apart when the girl he believes was his, leaves. Depression drives Sid into a web of darkness. His life slips, his business falters, and the world around him shatters. Shanaya enters his life as his wife, unaware of his personal battles. She trusts him and inspires him to rediscover himself.
+                    </p>
+                    <button class="toggle-desc-btn">Learn More</button>
+                    <p>Price: Rs150</p>
+                    <button class="adopt-btn" data-book-title="Book Title 1" data-book-price="150">Adopt</button>
+                </li>
+                <li>
+                    <img src="c:\Users\abhis\OneDrive\Documents\book 20.jpg" alt="Book">
+                    <h3>Author's Name: Ranjit Chaudhri</h3>
+                    <p class="short-desc">
+                        According to the legend, Sage Vasugupta received a divine revelation...
+                    </p>
+                    <p class="full-desc" style="display: none;">
+                        According to the legend, Sage Vasugupta received a divine revelation in a dream where Lord Shiva instructed him to seek out a specific stone near a serene stream. To his amazement, the stone turned over at his touch, revealing the sacred Shiva Sutras etched upon its surface. These profound sutras unravel the mysteries of our true nature and the illusory existence we inhabit.
+                    </p>
+                    <button class="toggle-desc-btn">Learn More</button>
+                    <p>Price: Rs180</p>
+                    <button class="adopt-btn" data-book-title="Book Title 2" data-book-price="180">Adopt</button>
+                </li>
+                <li>
+                    <img src="c:\Users\abhis\OneDrive\Documents\book 21.jpg" alt="Book">
+                    <h3>Author's Name: Rabindranath Tagore</h3>
+                    <p class="short-desc">
+                        He rejected formal education and yet began a world-famous university. His poems were mocked for their colloquial language but they were adopted as anthems by two...
+                    </p>
+                    <p class="full-desc" style="display: none;">
+                        He rejected formal education and yet began a world-famous university. His poems were mocked for their colloquial language but they were adopted as anthems by two countries. Bengali society despaired of him until he was awarded the coveted Nobel Prize for Literature and a knighthood! Rabindranath Tagore, whose multi-faceted life was as fascinating as it is inspiring, lives on in his books, his music and his thought-provoking, unconventional ideals.
+                    </p>
+                    <button class="toggle-desc-btn">Learn More</button>
+                    <p>Price: Rs120</p>
+                    <button class="adopt-btn" data-book-title="Book Title 2" data-book-price="120">Adopt</button>
+                </li>
+            </ul>
+        </section>
+
+        <div id="overlay"></div>
+
+        <section id="adoption-form-section">
+            <h2>Adopt Your Book</h2>
+            <form id="adoption-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <input type="hidden" id="book-title" name="book-title">
+                <input type="hidden" id="book-price" name="book-price">
+
+                <button type="submit">Complete Adoption</button>
+                <button type="button" id="cancel-adopt">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Book Adoption and Donation</p>
+    </footer>
+
+    <script>
+        // Toggle description functionality
+        document.querySelectorAll(".toggle-desc-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const shortDesc = button.previousElementSibling.previousElementSibling;
+                const fullDesc = button.previousElementSibling;
+
+                if (fullDesc.style.display === "none") {
+                    fullDesc.style.display = "block";
+                    shortDesc.style.display = "none";
+                    button.textContent = "Learn Less";
+                } else {
+                    fullDesc.style.display = "none";
+                    shortDesc.style.display = "block";
+                    button.textContent = "Learn More";
+                }
+            });
+        });
+
+        // Adoption form functionality
+        const adoptButtons = document.querySelectorAll(".adopt-btn");
+        const formSection = document.getElementById("adoption-form-section");
+        const overlay = document.getElementById("overlay");
+        const cancelAdoptButton = document.getElementById("cancel-adopt");
+        const bookTitleInput = document.getElementById("book-title");
+        const bookPriceInput = document.getElementById("book-price");
+
+        adoptButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const title = button.getAttribute("data-book-title");
+                const price = button.getAttribute("data-book-price");
+                bookTitleInput.value = title;
+                bookPriceInput.value = price;
+
+                formSection.style.display = "block";
+                overlay.style.display = "block";
+            });
+        });
+
+        cancelAdoptButton.addEventListener("click", () => {
+            formSection.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+    
+
+
+        overlay.addEventListener("click", () => {
+            formSection.style.display = "none";
+            overlay.style.display = "none";
+        });
+    </script>
+</body>
+</html>

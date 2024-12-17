@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            width: 100%;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            margin-top: 70px; /* Space for fixed navbar */
+            width: 80%;
+        }
+        .donate-header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .donate-header h1 {
+            font-size: 48px; /* Increased font size */
+            font-weight: bold;
+        }
+        .donation-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .donation-form h2 {
+            text-align: center;
+        }
+        .donation-form label {
+            margin-bottom: 8px;
+        }
+        .donation-form input, .donation-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .donation-form button {
+            padding: 8px 16px; /* Reduced padding for smaller button */
+            font-size: 14px; /* Reduced font size for smaller text */
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .donation-form button:hover {
+            background-color: #0056b3;
+        }
+        .donation-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar at the top -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <!-- Donation Header -->
+        <section class="donate-header">
+            <h1>Donate Books</h1>
+            <p>Help us provide access to books for everyone. Your donations will make a difference!</p>
+        </section>
+
+        <!-- Donation Form Section -->
+        <section class="donation-form">
+            <h2>Donation Form</h2>
+            <form action="process_donation.php" method="POST">
+                <label for="book-title">Book Title:</label>
+                <input type="text" id="book-title" name="book-title" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="condition">Condition:</label>
+                <select id="condition" name="condition" required>
+                    <option value="new">New</option>
+                    <option value="used">Used</option>
+                    <option value="damaged">Damaged</option>
+                </select>
+
+                <button type="submit">Donate</button>
+            </form>
+        </section>
+
+        <!-- Donation Info Section -->
+        <section class="donation-info">
+            <h3>Donation Address: 66678-js,Vibhuti Khand,Gomti Nagar, Lucknow</h3>  
+            <p>Please drop off your book donations at the following address:</p>
+            <address>
+                BookBloom Foundation<br>
+                1234 Book St, Library City,<br>
+                Reading District, RD 56789<br>
+                Lucknow.
+            </address>
+            <p>If you prefer, you can also arrange for a pick-up by contacting us at <a href="mailto:donate@bookbloom.org">donate@bookbloom.org</a>.</p>
+        </section>
+    </main>
+
+</body>
+</html>

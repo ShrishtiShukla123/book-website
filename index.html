@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles */
+        .featured ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;  
+            padding: 0;
+            list-style: none;
+        }  
+        .featured li {  
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;  
+            background-color: #f9f9f9;
+        }       
+        .featured img { 
+            max-width: 100%;   
+            height: auto;  
+            border-radius: 4px;   
+        }   
+        .call-to-action button {
+            margin: 5px;                   
+            padding: 10px 20px;  
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+        }  
+        .call-to-action button:hover {
+            background-color: #0056b3;
+        }                                                      
+        .call-to-action button a {
+            text-decoration: none;
+            color: white;
+        }   
+    </style>                                                                     
+</head>      
+<body>                            
+    <header>             
+        <nav>              
+            <ul>                                                                                                     
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>  
+            </ul>                                                  
+        </nav>
+    </header>
+    <main>
+        <section class="hero" style="text-align: center;">  
+            <h1>BookBloom</h1>
+            <p>Our mission is to provide access to books for everyone.</p>
+            <img src="c:\Users\abhis\OneDrive\Documents\book 15.jpeg" alt="book" style="width: 50%; max-width: 400px; height: auto; border-radius: 10px;">
+        </section>                                          
+            
+        <section class="featured">                               
+            <h2>Featured Books</h2>                    
+            <ul>                              
+                <li>                                                  
+                    <img src="c:\Users\abhis\OneDrive\Documents\book 16.jpeg" alt="Book">  
+                    <h3>Book Title: Surrounded by Idiots</h3>
+                    <p class="short-desc">
+                        Surrounded by Idiots by Thomas Erikson is a practical guide to understanding different communication styles...
+                    </p>
+                    <p class="full-desc" style="display: none;">
+                        The book categorizes individuals into four colors—Red (dominant), Yellow (inspiring), Green (supportive), and Blue (analytical)—each representing distinct behavioral traits. The book offers insights into improving workplace dynamics, personal relationships, and conflict resolution. It combines psychology with real-life examples, making complex concepts accessible to everyone. With humor and clarity, Erikson emphasizes empathy and adaptability.
+                    </p>
+                    <button onclick="toggleDetails(this)">Learn More</button>  
+                </li>                                
+                <li>                                          
+                    <img src="c:\Users\abhis\OneDrive\Documents\book 17.jpg" alt="Book">
+                    <h3>Book Title: The Power of Your Subconscious Mind</h3>
+                    <p class="short-desc">
+                        The Power of Your Subconscious Mind by Dr. Joseph Murphy: Master your Mindset...
+                    </p> 
+                    <p class="full-desc" style="display: none;">
+                        Unleash the magic of thinking big and discover the laws of human nature. This book offers practical guidance for mastering your mindset and achieving your goals by tapping into the power of your subconscious.
+                    </p>
+                    <button onclick="toggleDetails(this)">Learn More</button>  
+                </li>                           
+                <li>                            
+                    <img src="c:\Users\abhis\OneDrive\Documents\book 18.jpg" alt="Book">  
+                    <h3>Book Title: You Can</h3>
+                    <p class="short-desc">
+                        Through the empowering self-help manual *You Can*, penned to promote personal growth...  
+                    </p>
+                    <p class="full-desc" style="display: none;">
+                        George Matthew Adams discusses things to do to pave your way to a fulfilling, successful life—such as sitting for an hour in silence to shape your creative vision, going the extra mile in serving others, letting your character rule your work, studying your mistakes, and learning to use time effectively.
+                    </p>
+                    <button onclick="toggleDetails(this)">Learn More</button>  
+                </li>
+            </ul>                  
+        </section>                       
+        
+        <section class="call-to-action">
+            <h2>Get Involved</h2>
+            <p>Donate or adopt books today!</p>
+            <button><a href="donate.html">Donate</a></button>
+            <button><a href="adopt.html">Adopt</a></button>
+        </section>                       
+
+        <script>                                                              
+            function toggleDetails(button) {
+                const fullDesc = button.previousElementSibling;
+                const shortDesc = fullDesc.previousElementSibling;
+                if (fullDesc.style.display === "none") {
+                    fullDesc.style.display = "block";
+                    shortDesc.style.display = "none";
+                    button.textContent = "Show Less";
+                } else { 
+                    fullDesc.style.display = "none";
+                    shortDesc.style.display = "block";
+                    button.textContent = "Learn More"
+                }
+            }
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2024 Book Adoption and Donation</p>  
+    </footer>
+</body>
+</html>
